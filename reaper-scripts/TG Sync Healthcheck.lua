@@ -47,9 +47,9 @@ else
   cf:close()
   pass("Config file exists")
 
-  local server = content:match("SERVER=(.-)\n")
-  local remote_base = content:match("REMOTE_BASE=(.-)\n")
-  local local_base = content:match("LOCAL_BASE=(.-)\n")
+  local server = content:match("SERVER='(.-)'\n") or content:match("SERVER=(.-)\n")
+  local remote_base = content:match("REMOTE_BASE='(.-)'\n") or content:match("REMOTE_BASE=(.-)\n")
+  local local_base = content:match("LOCAL_BASE='(.-)'\n") or content:match("LOCAL_BASE=(.-)\n")
 
   if server and server ~= "" then
     pass("SERVER configured")
@@ -121,13 +121,13 @@ if cf then
   if content_again then
     local c = content_again:read("*a")
     content_again:close()
-    local server = c:match("SERVER=(.-)\n")
+    local server = c:match("SERVER='(.-)'\n") or c:match("SERVER=(.-)\n")
     if server and server ~= "" then
       local ssh_test = run('ssh -o ConnectTimeout=5 "' .. server .. '" echo reaper-sync-ok 2>&1')
       if ssh_test:match("reaper%-sync%-ok") then
         pass("SSH connection to " .. server)
 
-        local remote_base = c:match("REMOTE_BASE=(.-)\n")
+        local remote_base = c:match("REMOTE_BASE='(.-)'\n") or c:match("REMOTE_BASE=(.-)\n")
         if remote_base then
           local dir_test = run('ssh "' .. server .. '" "test -d \'' .. remote_base .. '\' && echo yes || echo no" 2>&1')
           if dir_test:match("yes") then
@@ -158,7 +158,7 @@ if projfn and projfn ~= "" then
   if cf2 then
     local c = cf2:read("*a")
     cf2:close()
-    local local_base = c:match("LOCAL_BASE=(.-)\n")
+    local local_base = c:match("LOCAL_BASE='(.-)'\n") or c:match("LOCAL_BASE=(.-)\n")
     if local_base and proj_dir then
       local expected = local_base .. "/" .. proj_name
       if proj_dir == expected then

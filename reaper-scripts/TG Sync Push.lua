@@ -12,7 +12,7 @@ local function read_local_base()
   if not f then return nil end
   local content = f:read("*a")
   f:close()
-  return content:match("LOCAL_BASE=(.-)\n")
+  return content:match("LOCAL_BASE='(.-)'\n") or content:match("LOCAL_BASE=(.-)\n")
 end
 
 local function get_project_info()

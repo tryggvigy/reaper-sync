@@ -16,7 +16,7 @@ local function read_config_value(key)
   if not f then return nil end
   local content = f:read("*a")
   f:close()
-  return content:match(key .. "=(.-)\n")
+  return content:match(key .. "='(.-)'\n") or content:match(key .. "=(.-)\n")
 end
 
 local function guess_base_path()
@@ -76,9 +76,9 @@ if not f then
   return
 end
 
-f:write("SERVER=" .. server .. "\n")
-f:write("REMOTE_BASE=" .. remote_base .. "\n")
-f:write("LOCAL_BASE=" .. local_base .. "\n")
+f:write("SERVER='" .. server .. "'\n")
+f:write("REMOTE_BASE='" .. remote_base .. "'\n")
+f:write("LOCAL_BASE='" .. local_base .. "'\n")
 f:close()
 
 reaper.ShowMessageBox(
