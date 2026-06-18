@@ -106,9 +106,7 @@ cmd_push() {
                 exit 1
             fi
         else
-            echo "WARNING: '$project' is not locked by you. Push anyway? (y/n)"
-            read -r confirm
-            [ "$confirm" = "y" ] || exit 1
+            echo "WARNING: '$project' is not locked by you. Pushing anyway."
         fi
     else
         echo "Project '$project' is new — creating on server..."
@@ -180,12 +178,6 @@ cmd_break_lock() {
     echo "Current lock:"
     echo "$lock"
 
-    if [ -t 0 ]; then
-        echo ""
-        echo "Break lock? (y/n)"
-        read -r confirm
-        [ "$confirm" = "y" ] || exit 1
-    fi
 
     remote "rm -f '$REMOTE_BASE/$project/.lock'"
     echo "Lock removed from '$project'"

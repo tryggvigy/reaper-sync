@@ -7,16 +7,29 @@
         <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Setup.lua</source>
         <source file="reaper-sync/reaper-sync.sh" type="data">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/client/reaper-sync.sh</source>
       </version>
+      <version name="0.2.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Quote config values for paths with spaces. Remove CLI interactive prompts.]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Setup.lua</source>
+        <source file="reaper-sync/reaper-sync.sh" type="data">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/client/reaper-sync.sh</source>
+      </version>
     </reapack>
     <reapack name="TG Sync Push.lua" type="script" desc="TG: Sync Push">
       <version name="0.1.0" author="Tryggvi Gylfason">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Push.lua</source>
       </version>
+      <version name="0.2.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Handle quoted config values.]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Push.lua</source>
+      </version>
     </reapack>
     <reapack name="TG Sync Pull.lua" type="script" desc="TG: Sync Pull">
       <version name="0.1.0" author="Tryggvi Gylfason">
         <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Pull.lua</source>
+      </version>
+      <version name="0.2.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Auto-open pulled project in new tab or reload if already open.]]></changelog>
         <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Pull.lua</source>
       </version>
     </reapack>
@@ -35,6 +48,10 @@
     <reapack name="TG Sync Healthcheck.lua" type="script" desc="TG: Sync Healthcheck">
       <version name="0.1.0" author="Tryggvi Gylfason">
         <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Healthcheck.lua</source>
+      </version>
+      <version name="0.2.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Handle quoted config values.]]></changelog>
         <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Healthcheck.lua</source>
       </version>
     </reapack>

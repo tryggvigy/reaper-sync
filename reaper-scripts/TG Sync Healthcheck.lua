@@ -1,5 +1,5 @@
 -- @description TG: Sync Healthcheck
--- @version 0.1.0
+-- @version 0.2.0
 -- @author Tryggvi Gylfason
 -- @about
 --   Health check for reaper-sync. Verifies setup, CLI, and server connectivity.

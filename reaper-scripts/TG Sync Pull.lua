@@ -1,5 +1,5 @@
 -- @description TG: Sync Pull
--- @version 0.1.0
+-- @version 0.2.0
 -- @author Tryggvi Gylfason
 -- @about
 --   Pull a project from the server (locks it for editing).

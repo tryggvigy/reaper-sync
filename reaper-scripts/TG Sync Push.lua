@@ -1,5 +1,5 @@
 -- @description TG: Sync Push
--- @version 0.1.0
+-- @version 0.2.0
 -- @author Tryggvi Gylfason
 -- @about
 --   Push the current Reaper project to the server and unlock it.

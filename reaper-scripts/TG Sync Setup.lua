@@ -1,5 +1,5 @@
 -- @description TG: Sync Setup
--- @version 0.1.0
+-- @version 0.2.0
 -- @author Tryggvi Gylfason
 -- @about
 --   One-time setup for reaper-sync. Configures server connection
