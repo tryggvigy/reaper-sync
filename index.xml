@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index version="1" name="TG Reaper Sync">
+  <category name="Sync">
+    <reapack name="TG Sync Setup.lua" type="script" desc="TG: Sync Setup">
+      <version name="0.1.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Setup.lua</source>
+        <source file="reaper-sync/reaper-sync.sh" type="data">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/client/reaper-sync.sh</source>
+      </version>
+    </reapack>
+    <reapack name="TG Sync Push.lua" type="script" desc="TG: Sync Push">
+      <version name="0.1.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Push.lua</source>
+      </version>
+    </reapack>
+    <reapack name="TG Sync Pull.lua" type="script" desc="TG: Sync Pull">
+      <version name="0.1.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Pull.lua</source>
+      </version>
+    </reapack>
+    <reapack name="TG Sync Status.lua" type="script" desc="TG: Sync Status">
+      <version name="0.1.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Status.lua</source>
+      </version>
+    </reapack>
+    <reapack name="TG Sync Healthcheck.lua" type="script" desc="TG: Sync Healthcheck">
+      <version name="0.1.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Healthcheck.lua</source>
+      </version>
+    </reapack>
+  </category>
+</index>
