@@ -51,17 +51,32 @@ if confirm ~= 6 then return end
 local output = run('bash "' .. REAPER_SYNC .. '" pull "' .. project .. '"')
 reaper.ShowMessageBox(output, "Sync Pull", 0)
 
--- Find and open the .rpp file (case-insensitive for .rpp/.RPP)
+-- Find the .rpp file (case-insensitive for .rpp/.RPP)
 local proj_path = LOCAL_BASE .. "/" .. project
 local handle = io.popen('find "' .. proj_path .. '" -maxdepth 1 -iname "*.rpp" -print -quit 2>/dev/null')
 local rpp_file = handle:read("*l")
 handle:close()
 
 if rpp_file and rpp_file ~= "" then
-  local open_it = reaper.ShowMessageBox(
-    "Open " .. rpp_file:match("([^/]+)$") .. "?",
-    "Sync Pull", 4)
-  if open_it == 6 then
+  -- Check if this project is already open in a tab
+  local already_open = false
+  local i = 0
+  while true do
+    local proj, fn = reaper.EnumProjects(i)
+    if not proj then break end
+    if fn == rpp_file then
+      already_open = true
+      reaper.SelectProjectInstance(proj)
+      break
+    end
+    i = i + 1
+  end
+
+  if already_open then
+    reaper.Main_openProject("noprompt:" .. rpp_file)
+    reaper.ShowMessageBox("Project reloaded from server.", "Sync Pull", 0)
+  else
+    reaper.Main_OnCommand(41929, 0) -- new project tab
     reaper.Main_openProject(rpp_file)
   end
 end

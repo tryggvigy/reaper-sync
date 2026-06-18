@@ -13,7 +13,7 @@ SERVER="${SERVER:?ERROR: SERVER not set. Run the setup script in Reaper or add S
 REMOTE_BASE="${REMOTE_BASE:?ERROR: REMOTE_BASE not set. Run the setup script in Reaper or add REMOTE_BASE=/path to $CONFIG_FILE}"
 LOCAL_BASE="${LOCAL_BASE:?ERROR: LOCAL_BASE not set. Run the setup script in Reaper or add LOCAL_BASE=/path to $CONFIG_FILE}"
 
-RSYNC_OPTS=(-avz -e ssh --exclude='Peaks/' --exclude='*.RPP-bak' --exclude='.DS_Store' --exclude='.lock')
+RSYNC_OPTS=(-avz -e ssh --exclude='Peaks/' --exclude='Backups/' --exclude='*.RPP-bak' --exclude='*.rpp-bak' --exclude='.DS_Store' --exclude='.lock')
 
 usage() {
     cat <<'EOF'
