@@ -26,6 +26,12 @@
         <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Status.lua</source>
       </version>
     </reapack>
+    <reapack name="TG Sync Break Lock.lua" type="script" desc="TG: Sync Break Lock">
+      <version name="0.1.0" author="Tryggvi Gylfason">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://raw.githubusercontent.com/tryggvigy/reaper-sync/main/reaper-scripts/TG%20Sync%20Break%20Lock.lua</source>
+      </version>
+    </reapack>
     <reapack name="TG Sync Healthcheck.lua" type="script" desc="TG: Sync Healthcheck">
       <version name="0.1.0" author="Tryggvi Gylfason">
         <changelog><![CDATA[Initial release]]></changelog>

@@ -179,10 +179,13 @@ cmd_break_lock() {
 
     echo "Current lock:"
     echo "$lock"
-    echo ""
-    echo "Break lock? (y/n)"
-    read -r confirm
-    [ "$confirm" = "y" ] || exit 1
+
+    if [ -t 0 ]; then
+        echo ""
+        echo "Break lock? (y/n)"
+        read -r confirm
+        [ "$confirm" = "y" ] || exit 1
+    fi
 
     remote "rm -f '$REMOTE_BASE/$project/.lock'"
     echo "Lock removed from '$project'"
